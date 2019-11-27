@@ -9,7 +9,7 @@ module.exports.handler = async () => {
   };
 
   try {
-    const result = await dynamoDb.scan(params);
+    const result = await dynamoDb.scan(params).promise();
 
     response = {
       statusCode: 200,

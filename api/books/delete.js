@@ -12,7 +12,7 @@ module.exports.handler = async event => {
   };
 
   try {
-    await dynamoDb.delete(params);
+    await dynamoDb.delete(params).promise();
 
     response = {
       statusCode: 200,
